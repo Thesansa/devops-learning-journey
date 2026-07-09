@@ -1,5 +1,13 @@
 # 🚀 DevOps Learning Journey
 
+![Status](https://img.shields.io/badge/Status-In%20Progress-blue)
+
+![DevOps](https://img.shields.io/badge/Domain-DevOps-orange)
+
+![Program](https://img.shields.io/badge/IEEE-Young%20Prot%C3%A9g%C3%A9%202026-blue)
+
+![Project](https://img.shields.io/badge/Project-SOS%20Emergency%20Alert%20System-success)
+
 Welcome to my DevOps Learning Journey!
 
 This repository documents my hands-on learning experience throughout the **IEEE Young Protégé 2026** mentorship program. As someone starting with no prior hands-on experience in DevOps, my goal is to build a strong foundation while applying every concept to a real-world software project.
