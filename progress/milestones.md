@@ -16,16 +16,6 @@ Date:
 ---
 
 ## Milestone 2
-### Week 1 Completed
-
-- [x] Understand DevOps fundamentals
-- [ ] Learn Linux basics
-- [ ] Learn Git & GitHub
-- [ ] Complete Week 1 documentation
-
----
-
-## Milestone 3
 ### Development Started
 
 - [ ] Spring Boot project setup
@@ -34,7 +24,7 @@ Date:
 
 ---
 
-## Milestone 4
+## Milestone 3
 ### Dockerized Application
 
 - [ ] Dockerfile created
@@ -43,7 +33,7 @@ Date:
 
 ---
 
-## Milestone 5
+## Milestone 4
 ### Cloud Deployment
 
 - [ ] Deploy application to Microsoft Azure
@@ -51,7 +41,7 @@ Date:
 
 ---
 
-## Milestone 6
+## Milestone 5
 ### Mid Review Completed
 
 - [ ] Hosted MVP demonstrated
@@ -59,7 +49,7 @@ Date:
 
 ---
 
-## Milestone 7
+## Milestone 6
 ### CI/CD Pipeline
 
 - [ ] GitHub Actions workflow
@@ -68,14 +58,14 @@ Date:
 
 ---
 
-## Milestone 8
+## Milestone 7
 ### Kubernetes
 
 - [ ] Deploy application using Kubernetes
 
 ---
 
-## Milestone 9
+## Milestone 8
 ### Final Project
 
 - [ ] Final MVP
