@@ -226,3 +226,8 @@ DevOps encourages all teams to collaborate continuously throughout the entire so
 ### Biggest Realization
 
 > **DevOps isn't about learning Docker, Kubernetes, or GitHub Actions first. It's about understanding how software is continuously developed, delivered, monitored, and improved through collaboration, automation, and feedback.**
+
+
+## 🔗 Applied to SOS Project
+
+After learning the DevOps lifecycle, I identified that the SOS project is currently in the Planning stage and is about to move into the Coding stage. This understanding will help me align future development with DevOps practices such as version control, containerization, cloud deployment, and CI/CD.
