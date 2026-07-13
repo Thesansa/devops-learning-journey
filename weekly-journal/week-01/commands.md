@@ -97,3 +97,27 @@ These commands answer:
 
 - 📍 Where am I?
 - 📂 What files and folders are here?
+
+
+## File Management
+
+| Command | Description |
+|---------|-------------|
+| `cp <source> <destination>` | Copy a file |
+| `mv <source> <destination>` | Move or rename a file |
+| `rm <file>` | Delete a file |
+| `rmdir <directory>` | Delete an empty directory |
+| `rm -r <directory>` | Delete a directory and everything inside it |
+| `cat <file>` | Display the contents of a file |
+| `clear` | Clear the terminal screen |
+
+---
+
+## Output Redirection
+
+```bash
+echo "Hello DevOps!" > hello.txt
+```
+
+- `echo` → Prints text.
+- `>` → Redirects the output into a file.
