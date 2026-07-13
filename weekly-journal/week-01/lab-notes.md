@@ -52,3 +52,11 @@ clear
 ### Outcome
 
 Successfully performed Linux file management operations using the terminal and gained practical experience navigating, creating, copying, moving, renaming, deleting, and viewing files and directories.
+
+### Skills Acquired
+
+- Linux terminal navigation
+- Linux file management
+- Understanding the Linux filesystem
+- Basic command-line workflow
+- Connecting Linux concepts to DevOps practices
