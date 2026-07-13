@@ -44,7 +44,11 @@
 - [ ] HTTP / HTTPS *(Web Protocols)*
 - [ ] SSH *(OpenSSH)*
 - [ ] Ports & Firewalls *(Linux Firewall)*
-
+- [ ] SSH Fundamentals
+- [ ] SSH Key Authentication
+- [ ] SSH Client
+- [ ] SSH Agent
+- [ ] GitHub SSH
 ---
 
 ## 📂 Version Control
