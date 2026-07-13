@@ -244,3 +244,152 @@ As the project progresses, Linux will be used to:
 Although the application is currently in the planning and early development stages, understanding Linux prepares me for the deployment, automation, and operational phases of the DevOps lifecycle.
 
 Linux is not used to develop the application's features directly. Instead, it provides the operating environment where the application will be built, deployed, monitored, and maintained.
+
+
+
+## Files vs Directories
+
+A **directory (folder)** is a container that stores files and other directories.
+
+A **file** stores data or information.
+
+Example:
+
+```
+📁 SOS-Project
+├── 📄 README.md
+├── 📄 docker-compose.yml
+├── 📁 backend
+└── 📁 frontend
+```
+
+Directories help organize files, while files contain the actual content.
+
+---
+
+## Linux File Management
+
+Linux file management follows the CRUD (Create, Read, Update, Delete) concept commonly used in software development.
+
+| Operation | Linux Commands |
+|-----------|----------------|
+| Create | `mkdir`, `touch` |
+| Read | `pwd`, `ls`, `cat` |
+| Update | `mv` (move/rename) |
+| Delete | `rm`, `rmdir`, `rm -r` |
+
+---
+
+## Linux Directory Structure
+
+Linux starts from a single root directory (`/`), unlike Windows which uses drive letters (e.g., C:\).
+
+```
+/
+├── home
+├── etc
+├── var
+├── usr
+├── tmp
+├── opt
+├── bin
+└── dev
+```
+
+### Common Linux Directories
+
+| Directory | Purpose | DevOps Example |
+|-----------|---------|----------------|
+| `/` | Root directory | Starting point of the filesystem |
+| `/home` | User files | Development workspace |
+| `/etc` | Configuration files | SSH, Nginx, DNS configurations |
+| `/var` | Variable data and logs | `/var/log` for application logs |
+| `/usr` | Installed software | System applications |
+| `/tmp` | Temporary files | Installation scripts |
+| `/opt` | Optional applications | Deployed applications |
+| `/dev` | Device files | Hardware representation |
+
+---
+
+## Linux in DevOps
+
+### Why Docker Uses Linux
+
+Docker relies on Linux kernel features such as namespaces and control groups (cgroups) to:
+
+- Isolate applications
+- Share the host operating system kernel
+- Use fewer resources than traditional virtual machines
+
+This makes containers lightweight and efficient.
+
+---
+
+### Why Azure Virtual Machines Usually Run Linux
+
+Linux is commonly chosen because it is:
+
+- Open-source
+- Lightweight
+- Stable
+- Efficient
+- Cost-effective (no Windows licensing)
+
+---
+
+### Why Kubernetes Uses Linux
+
+Kubernetes manages containers, and most containers run on Linux.
+
+Linux provides the ideal platform for container orchestration.
+
+---
+
+### Why DevOps Engineers Use Terminals
+
+Production servers are usually managed remotely through SSH.
+
+Using terminals allows engineers to:
+
+- Manage servers remotely
+- Automate repetitive tasks using scripts
+- Administer hundreds of servers efficiently
+
+---
+
+## DevOps Workflow Example
+
+```
+Developer Laptop
+        │
+        ▼
+Git Push
+        │
+        ▼
+GitHub
+        │
+        ▼
+GitHub Actions
+        │
+        ▼
+Docker Build
+        │
+        ▼
+Azure Linux Server
+        │
+        ▼
+Docker Container
+        │
+        ▼
+Users
+```
+
+---
+
+## Biggest Realization
+
+Initially, I thought Linux was simply another operating system used by DevOps engineers.
+
+After learning about Docker, cloud computing, Kubernetes, and server administration, I realized Linux is the foundation of modern DevOps infrastructure.
+
+Learning Linux is not about memorizing commands—it is about understanding and managing the environment where modern applications are built, deployed, and maintained.
