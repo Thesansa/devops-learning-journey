@@ -1,8 +1,8 @@
 # 📈 Learning Progress
 
 - [x] DevOps Fundamentals
-- [ ] Linux Fundamentals
-- [ ] Linux Terminal
+- [x] Linux Fundamentals
+- [x] Linux Terminal
 - [ ] Git
 - [ ] GitHub
 - [ ] Networking
@@ -29,11 +29,11 @@
 
 ## 💻 Operating Systems
 
-- [ ] Linux Fundamentals *(Ubuntu / WSL)* ⏳
-- [ ] Linux Terminal *(Bash)*
-- [ ] Linux File System *(Linux)*
-- [ ] Linux Permissions *(chmod, chown)*
-- [ ] Process & Service Management *(systemctl, ps)*
+- [x] Linux Fundamentals *(Ubuntu / WSL)* ⏳
+- [x] Linux Terminal *(Bash)*
+- [x] Linux File System *(Linux)*
+- [x] Linux Permissions *(chmod)*
+- [x] Process Management *(ps,top)*
 
 ---
 
