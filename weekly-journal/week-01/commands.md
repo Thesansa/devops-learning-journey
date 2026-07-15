@@ -121,3 +121,26 @@ echo "Hello DevOps!" > hello.txt
 
 - `echo` → Prints text.
 - `>` → Redirects the output into a file.
+
+
+## Linux Permissions
+
+| Command | Description |
+|---------|-------------|
+| `whoami` | Display the currently logged-in user. |
+| `groups` | Display the groups the current user belongs to. |
+| `ls -l` | Show files with detailed information, including permissions. |
+| `chmod +x <file>` | Add execute permission. |
+| `chmod -x <file>` | Remove execute permission. |
+| `chmod u+x <file>` | Add execute permission only for the owner. |
+| `sudo <command>` | Execute a command with administrator privileges. |
+
+---
+
+## Process Monitoring
+
+| Command | Description |
+|---------|-------------|
+| `ps` | Display processes running in the current terminal session. |
+| `top` | Monitor running processes, CPU usage, and memory usage in real time. |
+| `history` | Display previously executed terminal commands. |
