@@ -60,3 +60,255 @@ Successfully performed Linux file management operations using the terminal and g
 - Understanding the Linux filesystem
 - Basic command-line workflow
 - Connecting Linux concepts to DevOps practices
+
+  
+
+# Day 3 – Linux Command Pipelines & Log Analysis(Additional Linux Exploration)
+
+## Objective
+
+Learn how Linux commands can be combined using pipelines to search, filter, analyze, and process files efficiently. These techniques are commonly used by DevOps engineers when troubleshooting servers and analyzing application logs.
+
+---
+
+## New Commands Learned
+
+### 1. List Files Recursively
+
+```bash
+ls -R
+```
+
+Displays all files and directories recursively from the current directory.
+
+Useful for viewing an entire project structure.
+
+---
+
+### 2. Find Directories
+
+```bash
+find . -type d
+```
+
+Searches for all directories starting from the current directory (`.`).
+
+- `.` → Current directory
+- `-type d` → Search only for directories
+
+---
+
+### 3. Find Files
+
+```bash
+find . -type f
+```
+
+Searches for all files from the current directory.
+
+---
+
+### 4. Find Files by Extension
+
+```bash
+find . -type f -name "*.txt"
+```
+
+Finds every file ending with the `.txt` extension.
+
+Unlike `ls`, this command returns the full file path.
+
+---
+
+### 5. Find a Specific File
+
+```bash
+find . -type f -name "app.txt"
+```
+
+Searches for a file named `app.txt`.
+
+---
+
+## Pipelines (`|`)
+
+The pipe operator (`|`) sends the output of one command as the input to another command.
+
+General syntax:
+
+```bash
+command1 | command2
+```
+
+Example:
+
+```bash
+ls -R | grep "app.txt"
+```
+
+- `ls -R` lists all files recursively.
+- `grep` filters the output and displays only lines containing `app.txt`.
+
+---
+
+## Reading File Contents
+
+```bash
+find . -type f -name "app.txt" | xargs cat
+```
+
+Explanation:
+
+1. Find every file named `app.txt`.
+2. Pass the file names to `xargs`.
+3. `cat` prints the contents of each file.
+
+This is useful when multiple files share the same name in different directories.
+
+---
+
+## Searching Log Files
+
+```bash
+find . -type f -name "*.txt" | xargs cat | grep "ERROR"
+```
+
+Workflow:
+
+1. Find all `.txt` files.
+2. Print their contents.
+3. Display only lines containing the word `ERROR`.
+
+This simulates searching application log files for error messages.
+
+---
+
+## Sorting Results
+
+```bash
+find . -type f -name "*.txt" | xargs cat | grep "ERROR" | sort -k4
+```
+
+Sorts the filtered output using the fourth column.
+
+> **Note:** The column number depends on the log format.
+
+Example log:
+
+```
+2026-07-15 10:20:05 ERROR Database connection failed
+```
+
+Column 4 is:
+
+```
+Database
+```
+
+---
+
+## Remove Duplicate Records
+
+```bash
+find . -type f -name "*.txt" | xargs cat | grep "ERROR" | sort -k4 | uniq -f3
+```
+
+`uniq -f3`
+
+ignores the first three fields before comparing lines.
+
+Useful when timestamps are different but the actual error message is identical.
+
+---
+
+## Output Redirection
+
+Write output into a file.
+
+```bash
+find . -type f -name "*.txt" | xargs cat | grep "ERROR" > errors.log
+```
+
+If `errors.log` does not exist, Linux creates it.
+
+If it already exists, its contents are overwritten.
+
+---
+
+## Append Output
+
+```bash
+find . -type f -name "*.txt" | xargs cat | grep "ERROR" >> errors.log
+```
+
+`>>`
+
+Appends new output to the end of the file instead of replacing existing content.
+
+---
+
+## Difference Between `|` and `>`
+
+### Pipe (`|`)
+
+Passes the output of one command directly into another command.
+
+```
+Command A
+        │
+        ▼
+Command B
+```
+
+---
+
+### Redirection (`>`)
+
+Writes the output into a file.
+
+```
+Command
+
+↓
+
+output.txt
+```
+
+---
+
+## Execute a Command for Each File
+
+```bash
+find . -type f -name "*.txt" -exec rsync -R {} /backup \;
+```
+
+Explanation:
+
+- `find` searches for matching files.
+- `-exec` executes another command for each result.
+- `{}` represents the current file found.
+- `rsync -R` preserves the relative directory structure while copying.
+- `\;` tells `find` where the command ends.
+
+This is commonly used for backing up files while preserving their folder hierarchy.
+
+---
+
+## Practical DevOps Application
+
+These commands are useful when:
+
+- Searching server log files.
+- Monitoring application errors.
+- Finding configuration files.
+- Creating backups.
+- Automating repetitive Linux tasks.
+- Investigating production issues.
+
+---
+
+## Resource
+
+YouTube:
+<[tutorial link](https://youtu.be/fwP2JW_VnZI?si=e9jPo2QSZjQQ9jIJ)>
+
