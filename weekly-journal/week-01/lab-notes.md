@@ -312,3 +312,83 @@ These commands are useful when:
 YouTube:
 <[tutorial link](https://youtu.be/fwP2JW_VnZI?si=e9jPo2QSZjQQ9jIJ)>
 
+
+# Day 3 – Linux Permissions & Process Monitoring
+
+## Objective
+
+Learn how Linux manages user permissions and understand basic process monitoring using the terminal.
+
+---
+
+## Activities Performed
+
+### Linux Permissions
+
+- Identified the current Linux user using `whoami`.
+- Viewed user groups using `groups`.
+- Inspected file permissions with `ls -l`.
+- Created a shell script (`hello.sh`).
+- Added content to the script using `echo`.
+- Attempted to execute the script and received a **Permission denied** error.
+- Granted execute permission using `chmod +x`.
+- Successfully executed the script.
+- Removed execute permission using `chmod -x`.
+- Learned how to assign permissions to specific users using `u`, `g`, `o`, and `a`.
+
+---
+
+### Process Monitoring
+
+- Displayed running processes using `ps`.
+- Monitored system resource usage using `top`.
+- Viewed previously executed commands using `history`.
+
+---
+
+## Commands Executed
+
+```bash
+whoami
+groups
+ls -l
+
+touch hello.sh
+
+echo '#!/bin/bash' > hello.sh
+echo 'echo "Hello DevOps!"' >> hello.sh
+
+cat hello.sh
+
+./hello.sh
+
+chmod +x hello.sh
+
+ls -l
+
+./hello.sh
+
+chmod -x hello.sh
+
+ps
+top
+history
+```
+
+---
+
+## Observations
+
+- Linux prevents scripts from executing without execute (`x`) permission.
+- `chmod` modifies file permissions.
+- `sudo` provides temporary administrator privileges for system-level tasks.
+- Every command executed in the terminal runs as a separate process.
+- The `top` command provides real-time monitoring of CPU, memory, and running processes.
+
+---
+
+## Learning Outcome
+
+Successfully understood Linux permission management, shell basics, and process monitoring.
+
+These concepts provide the foundation for working with Docker containers, deployment scripts, cloud servers, and CI/CD pipelines.
