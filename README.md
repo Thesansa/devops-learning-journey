@@ -1,118 +1,194 @@
 # 🚀 DevOps Learning Journey
 
 ![Status](https://img.shields.io/badge/Status-In%20Progress-blue)
-
-![DevOps](https://img.shields.io/badge/Domain-DevOps-orange)
-
-![Program](https://img.shields.io/badge/IEEE-Young%20Prot%C3%A9g%C3%A9%202026-blue)
-
+![Domain](https://img.shields.io/badge/Domain-DevOps-orange)
+![Program](https://img.shields.io/badge/IEEE-Young%20Protégé%202026-blue)
 ![Project](https://img.shields.io/badge/Project-SOS%20Emergency%20Alert%20System-success)
 
 Welcome to my DevOps Learning Journey!
 
-This repository documents my hands-on learning experience throughout the **IEEE Young Protégé 2026** mentorship program. As someone starting with no prior hands-on experience in DevOps, my goal is to build a strong foundation while applying every concept to a real-world software project.
+This repository documents my hands-on learning experience throughout the **IEEE Young Protégé 2026** mentorship program.
 
-Rather than learning DevOps only through theory, I am progressively implementing each concept while developing my **Personal Safety Emergency Alert System**, allowing me to understand how modern software is built, deployed, automated, and maintained.
+Starting with little practical experience in DevOps, my goal is to build a strong foundation by learning modern DevOps practices and immediately applying them to a real-world software project.
 
----
-
-## 🎯 Objectives
-
-- Learn DevOps fundamentals from the ground up.
-- Apply DevOps practices throughout the Software Development Lifecycle (SDLC).
-- Gain practical experience with industry-standard tools and technologies.
-- Document my learning process, challenges, and reflections.
-- Build a portfolio demonstrating continuous growth and hands-on experience.
+Instead of studying DevOps only through theory, every concept is implemented as part of my **Personal Safety Emergency Alert System (SOS)**, allowing me to understand how software is developed, containerized, deployed, automated, monitored, and maintained in real-world environments.
 
 ---
 
-## 💻 Practical Project
+# 🎯 Objectives
 
-All concepts learned in this repository are applied to my accompanying project:
+This learning journey focuses on:
 
-**Personal Safety Emergency Alert System**
-
-➡️ Project Repository: *(Add your GitHub repository link here)*
+- Learning DevOps fundamentals from the ground up.
+- Applying every concept directly to the SOS Emergency Alert System.
+- Gaining practical experience with industry-standard tools and technologies.
+- Documenting hands-on work, architectural decisions, challenges, and reflections.
+- Building a portfolio that demonstrates continuous technical growth.
 
 ---
 
-## 📚 Learning Roadmap
+# 💻 Practical Project
 
-Throughout this journey, I plan to explore:
+All concepts learned throughout this repository are applied to my accompanying project.
 
+## Personal Safety Emergency Alert System (SOS)
+
+A web-based emergency alert platform designed to help users quickly notify trusted contacts during emergency situations.
+
+The project serves as the practical implementation platform for this DevOps learning journey.
+
+### Current Features
+
+- User Registration
+- User Login
+- User Logout
+- JWT Authentication
+- Refresh Token Authentication
+- Automatic Token Refresh
+- Dockerized Spring Boot Backend
+- PostgreSQL Container
+- Docker Compose Orchestration
+
+➡️ **Project Repository:**  
+https://github.com/Thesansa/personal-safety-emergency-alert-system
+
+---
+
+# 📚 Learning Roadmap
+
+This repository follows a progressive DevOps roadmap covering:
+
+- DevOps Fundamentals
 - Linux Fundamentals
+- Git & GitHub
+- SSH
 - Networking Basics
 - Bash Scripting
-- Python for Automation
-- Git & GitHub
 - Docker
-- Kubernetes
+- Docker Compose
 - Cloud Computing (Microsoft Azure)
 - CI/CD with GitHub Actions
+- Kubernetes
 - Monitoring & Logging
 - DevOps Security Best Practices
 
 ---
 
-## 📁 Repository Structure
+# 📈 Current Learning Progress
+
+| Week | Topics | Status |
+|------|--------|--------|
+| Week 1 | DevOps Fundamentals, Linux Fundamentals, Linux File Management, Permissions, Processes & Shell Basics | ✅ Completed |
+| Week 2 | Docker Fundamentals, Dockerfile, Docker Images, Docker Compose, Docker Networking & Volumes | ✅ Completed |
+| Week 3 | Git, GitHub, SSH, Networking & Bash | 🔄 In Progress |
+| Upcoming | Azure, GitHub Actions, Kubernetes, Monitoring & Security | ⏳ Planned |
+
+---
+
+# 🛠️ Practical Progress
+
+Every concept learned is immediately implemented in the SOS project.
+
+Current DevOps implementations include:
+
+- Ubuntu (WSL) Development Environment
+- Linux Command Line
+- Dockerized Spring Boot Backend
+- PostgreSQL Container
+- Docker Compose
+- Docker Networking
+- Docker Volumes
+- Multi-stage Docker Builds
+- JWT Authentication
+- Refresh Token Authentication
+- Automatic Token Renewal
+- Secure Refresh Token Storage
+
+---
+
+# 📁 Repository Structure
 
 ```text
 📦 devops-learning-journey
 │
 ├── roadmap/
+│
 ├── weekly-journal/
+│   ├── week-01/
+│   ├── week-02/
+│   └── ...
+│
 ├── cheat-sheets/
-├── scripts/
-├── resources/
+│
 ├── diagrams/
+│
+├── scripts/
+│
+├── resources/
+│
 ├── certificates/
+│
 └── progress/
 ```
 
 ---
 
-## 📅 Weekly Progress
+# 📝 What You'll Find Here
 
-| Week | Topics | Status |
-|------|--------|--------|
-| Week 1 | Linux Fundamentals, Git & GitHub | ⏳ |
-| Week 2 | Networking & Bash Scripting | ⬜ |
-| Week 3 | Python & Docker | ⬜ |
-| Week 4 | Docker Compose & Cloud Fundamentals | ⬜ |
-| Week 5 | Azure Cloud Deployment | ⬜ |
-| Week 6 | Mid Review Preparation | ⬜ |
-| Week 7 | GitHub Actions & CI/CD | ⬜ |
-| Week 8 | Kubernetes | ⬜ |
-| Week 9 | Monitoring & Logging | ⬜ |
-| Week 10 | Security & DevOps Best Practices | ⬜ |
-| Week 11 | Final Documentation | ⬜ |
-| Week 12 | Reflection & Project Showcase | ⬜ |
+Each weekly journal contains:
+
+- 📚 Concepts Learned
+- 💻 Hands-on Practice
+- ⚙️ Commands & Cheat Sheets
+- 🛠️ Practical Labs
+- 🚀 Applied to the SOS Project
+- 📖 Challenges Encountered
+- 💡 Solutions & Lessons Learned
+- 🤔 Weekly Reflections
 
 ---
 
-## 📝 What You'll Find Here
+# 🏆 Current Milestones
 
-Each week's journal includes:
+## DevOps Foundations
 
-- 📚 Concepts learned
-- 💻 Hands-on practice
-- ⚙️ Commands and scripts
-- 🚀 Application to the SOS project
-- 🚧 Challenges encountered
-- 💡 Solutions and lessons learned
-- 🤔 Weekly reflections
+- ✅ DevOps Fundamentals
+- ✅ Linux Fundamentals
+- ✅ Linux File Management
+- ✅ Linux Permissions
+- ✅ Linux Processes & Shell Basics
+
+## Containerization
+
+- ✅ Docker Fundamentals
+- ✅ Dockerfile
+- ✅ Docker Images
+- ✅ Docker Compose
+- ✅ Docker Networking
+- ✅ Docker Volumes
+
+## SOS Project
+
+- ✅ Authentication Module
+- ✅ JWT Authentication
+- ✅ Refresh Token Workflow
+- ✅ Backend Containerization
+- ✅ PostgreSQL Containerization
+- ✅ Docker Compose Orchestration
 
 ---
 
-## 🌱 Learning Philosophy
+# 🌱 Learning Philosophy
 
-> *"Learn → Practice → Apply → Reflect → Improve"*
+> **Learn → Practice → Apply → Document → Reflect → Improve**
 
-This repository is more than a collection of notes—it is a chronological record of my growth as I learn, experiment, solve problems, and apply DevOps principles to a real software project.
+Rather than learning DevOps as isolated tools, every technology is introduced when the project naturally requires it.
+
+This repository is more than a collection of notes—it is a chronological engineering journal documenting my learning process, implementation decisions, challenges, and continuous improvement while building a real-world software system.
 
 ---
 
-## 👨‍💻 Mentorship
+# 👨‍💻 Mentorship
 
 **Program:** IEEE Young Protégé 2026
 
@@ -122,6 +198,10 @@ This repository is more than a collection of notes—it is a chronological recor
 
 ---
 
-## 📌 Disclaimer
+# 📌 Disclaimer
 
-This repository is intended to document my learning journey. As I continue to gain experience, some approaches, implementations, and best practices may evolve over time. Feedback and suggestions are always welcome.
+This repository documents my personal DevOps learning journey.
+
+As I continue learning and gaining practical experience, some implementations, architectural decisions, and best practices may evolve over time.
+
+Feedback, suggestions, and constructive discussions are always welcome.
