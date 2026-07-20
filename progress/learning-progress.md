@@ -53,7 +53,7 @@
 
 ## 📂 Version Control
 
-- [ ] Git Fundamentals *(Git)*
+- [x] Git Fundamentals *(Git)*
 - [ ] Git Branching *(Git)*
 - [ ] GitHub *(GitHub)*
 - [ ] Pull Requests *(GitHub)*
@@ -79,12 +79,12 @@
 
 ## 📦 Containers
 
-- [ ] Docker Fundamentals *(Docker)*
-- [ ] Docker Images *(Docker)*
-- [ ] Docker Containers *(Docker)*
-- [ ] Docker Volumes *(Docker)*
-- [ ] Docker Networking *(Docker)*
-- [ ] Docker Compose *(Docker Compose)*
+- [x] Docker Fundamentals *(Docker)*
+- [x] Docker Images *(Docker)*
+- [x] Docker Containers *(Docker)*
+- [x] Docker Volumes *(Docker)*
+- [x] Docker Networking *(Docker)*
+- [x] Docker Compose *(Docker Compose)*
 
 ---
 
