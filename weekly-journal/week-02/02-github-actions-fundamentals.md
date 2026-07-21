@@ -274,3 +274,30 @@ The badge can be embedded inside the project README to display the latest CI sta
 
 ---
 
+
+## Understanding Failed Workflows
+
+A failed GitHub Actions workflow **does not** undo or remove a Git commit.
+
+The sequence is:
+
+```
+git push
+    ↓
+Commit stored on GitHub
+    ↓
+GitHub Actions runs
+    ↓
+Build Success / Failure
+```
+
+If the workflow fails, the commit remains in the repository. GitHub simply reports the failure, allowing developers to identify and fix issues before deployment or before other team members continue working with the latest changes.
+
+---
+
+## Build Verification vs Runtime Verification
+
+The current workflow only verifies that the project can be **built and containerized**.
+
+It does **not** verify that the Docker container starts successfully or that the application functions correctly at runtime.
+
