@@ -214,3 +214,108 @@ Instead of running the backend and database separately on my local machine, Dock
 The biggest realization was understanding that Docker is not only about packaging an application—it is also about creating a consistent execution environment where multiple services can work together reliably.
 
 Containerizing the authentication module also prepares the project for future Azure deployment because the same Docker image tested locally can be deployed without rebuilding or changing the application configuration.
+
+---
+
+# Week 2 – Applying github actions to the SOS Project
+
+## Objective
+
+Automate the verification of backend changes by introducing a Continuous Integration (CI) pipeline using GitHub Actions.
+
+---
+
+## Tasks Performed
+
+### 1. Created the First CI Workflow
+
+Created the workflow:
+
+```
+.github/workflows/backend-ci.yml
+```
+
+This workflow is triggered automatically whenever changes are pushed to the backend on the `main` branch.
+
+---
+
+### 2. Automated Backend Build
+
+The workflow automatically performs the following steps:
+
+```
+Git Push
+      │
+      ▼
+GitHub Actions Trigger
+      │
+      ▼
+Checkout Repository
+      │
+      ▼
+Setup JDK 21
+      │
+      ▼
+Copy Example Configuration
+      │
+      ▼
+Compile Spring Boot Project
+      │
+      ▼
+Package Application (JAR)
+      │
+      ▼
+Build Docker Image
+      │
+      ▼
+Report Success / Failure
+```
+
+This provides immediate feedback whenever backend code is pushed to GitHub.
+
+---
+
+### 3. Challenge Encountered
+
+The initial workflow failed during Maven tests.
+
+Reason:
+
+The default Spring Boot test attempted to connect to a PostgreSQL database.
+
+However, GitHub Actions runners start with a clean environment and no database service is available unless explicitly configured.
+
+To continue validating the build process, Maven tests were temporarily skipped using:
+
+```bash
+mvn clean package -DskipTests
+```
+
+---
+
+## Current CI Scope
+
+The current CI pipeline verifies:
+
+- Backend source code compiles successfully.
+- Maven packaging succeeds.
+- Docker image can be built successfully.
+- The existing Dockerfile remains compatible with new backend changes.
+
+The workflow **does not yet**:
+
+- Run integration tests.
+- Start the Spring Boot application.
+- Start a PostgreSQL container.
+- Verify REST API endpoints.
+- Deploy the application.
+
+These capabilities will be added in future iterations as the DevOps pipeline evolves.
+
+---
+
+## Outcome
+
+The SOS project now includes its first automated Continuous Integration (CI) pipeline.
+
+Every backend push is automatically validated, reducing the chance of committing changes that break the build and preparing the project for future automated testing and deployment.
