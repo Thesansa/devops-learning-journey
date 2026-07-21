@@ -319,3 +319,102 @@ These capabilities will be added in future iterations as the DevOps pipeline evo
 The SOS project now includes its first automated Continuous Integration (CI) pipeline.
 
 Every backend push is automatically validated, reducing the chance of committing changes that break the build and preparing the project for future automated testing and deployment.
+
+---
+
+
+## Branching Strategy & Protected Development Workflow
+
+To simulate a collaborative development environment, the `main` branch is protected using GitHub Rulesets.
+
+### Rules Configured
+
+- All changes to `main` must be made through a Pull Request.
+- The Backend CI workflow must pass before merging is allowed.
+- Ruleset is actively enforced on the `main` branch.
+
+This prevents unverified code from being merged directly into the primary branch.
+
+---
+
+### Development Workflow
+
+For each new backend feature:
+
+```text
+main
+   │
+   ▼
+Create Feature Branch
+   │
+   ▼
+Implement Feature
+   │
+   ▼
+Commit Changes
+   │
+   ▼
+Push Feature Branch
+   │
+   ▼
+Open Pull Request
+   │
+   ▼
+GitHub Actions (CI)
+   │
+   ├── ❌ Failed
+   │      │
+   │      ▼
+   │   Fix Issues
+   │      │
+   │      ▼
+   │   Push Again
+   │
+   └── ✅ Passed
+          │
+          ▼
+Merge Pull Request
+          │
+          ▼
+GitHub Actions (CI)
+          │
+          ▼
+Verify Main Branch
+```
+
+---
+
+### Standard Workflow
+
+```bash
+git checkout main
+git pull origin main
+
+git checkout -b backend/<feature-name>
+
+# Development...
+
+git add .
+git commit -m "..."
+
+git push origin backend/<feature-name>
+```
+
+Then:
+
+1. Create a Pull Request.
+2. Wait for Backend CI to complete.
+3. Merge only after the workflow succeeds.
+4. Delete the feature branch.
+5. Continue development from an updated `main`.
+
+---
+
+### Why This Matters
+
+Although I am currently the only developer on the project, this workflow follows common industry practices by:
+
+- Protecting the `main` branch from unverified changes.
+- Ensuring every feature passes CI before merging.
+- Maintaining a clean Git history.
+- Preparing the project for future collaborative development.
